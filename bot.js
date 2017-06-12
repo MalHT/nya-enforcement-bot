@@ -12,7 +12,7 @@ client.on('ready', () => {
   if (numBlocked) {
   
     console.log(`blocked ${numBlocked} humans`)
-    client.user.setGame(`blocked ${numBlocked} humans`);
+    client.user.setGame(`Initialised having blocked ${numBlocked} humans`);
     
   } else {
     
@@ -33,7 +33,7 @@ client.on('message', msg => {
     
     localStorage.setItem('numBlocked', numBlocked);
     client.user.setGame(`blocked ${numBlocked} humans`);
-    console.log(`blocked ${numBlocked} humans`)
+
   }
 });
 
