@@ -11,8 +11,8 @@ client.on('ready', () => {
   
   if (numBlocked) {
   
-    console.log(`blocked ${numBlocked} humans`)
-    client.user.setGame(`Initialised having blocked ${numBlocked} humans`);
+    console.log(`Initialised having blocked ${numBlocked} humans`)
+    client.user.setGame(`blocked ${numBlocked} humans`);
     
   } else {
     
