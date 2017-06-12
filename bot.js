@@ -39,4 +39,4 @@ client.on('message', msg => {
 
 let nyaCheck = new RegExp(/^(?:\W*(?:nya+n*|purr+|mr+ow+|meo*w+|mi+aou+)\W*)+$/, 'i');
 
-client.login('MzIzODY1NTkzMzI3Mzg2NjI0.DCBW3A.YvwZ2_UDYGlfL3XPc_a8TMYp2ic');
+client.login(localStorage.getItem('token'));
