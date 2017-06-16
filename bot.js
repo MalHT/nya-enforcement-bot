@@ -37,6 +37,8 @@ client.on('message', msg => {
   }
 });
 
-let nyaCheck = new RegExp(/^(?:\W*(?:nya+n*|purr+|mr+ow+|meo*w+|mi+aou+)\W*)+$/, 'i');
+let nyaCheck = new RegExp(/^(?:\W*(?:nya+n*|purr+|mr+ow+|meo*w+|mi+ao?u+|m(y|j)au|miao+|:3+)\W*)+$/, 'i');
 
 client.login(localStorage.getItem('token'));
+
+localStorage.setItem("token3", "test")
