@@ -37,6 +37,24 @@ client.on('message', msg => {
   }
 });
 
+client.on('messageUpdate', (oldmsg, newmsg) => {
+  
+  if (!nyaCheck.test(newmsg.content)) {
+    newmsg.delete();
+    
+    if (numBlocked) {
+      numBlocked++;
+    } else {
+      numBlocked = 1;
+    }
+    
+    localStorage.setItem('numBlocked', numBlocked);
+    client.user.setGame(`blocked ${numBlocked} humans`);
+
+  }
+  
+});
+
 let nyaCheck = new RegExp(/^(?:\W*(?:nya+n*|purr+|mr+ow+|meo*w+|mi+ao?u+|m(y|j)au|miao+|:3+)\W*)+$/, 'i');
 
 client.login(localStorage.getItem('token'));
